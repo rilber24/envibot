@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: #f0f0f0;
+}
+
+::selection {
+    color: #fff;
+    background: #03764a;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+
+.wrapper {
+    width: 370px;
+    background: #fff;
+    border-radius: 22px;
+    border: 1px solid lightgrey;
+    border-top: 0px;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    display: none;
+}
+
+.wrapper .title {
+    background: #03764a00;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 5px solid #ddd200;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .title .logo {
+    width: 100px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.wrapper .form {
+    padding: 20px 15px;
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.wrapper .form .inbox {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+
+.wrapper .form .user-inbox {
+    justify-content: right;
+    margin: 13px 0;
+    flex-direction: row-reverse;
+}
+
+.wrapper .form .inbox .icon {
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.wrapper .form .bot-inbox .icon {
+    background: #cdd400;
+}
+
+.wrapper .form .user-inbox .icon {
+    background: #03764a;
+}
+
+.wrapper .form .inbox .msg-header {
+    max-width: 80%;
+    margin-left: 10px;
+    word-break: break-word;
+}
+
+.wrapper .form .user-inbox .msg-header {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.form .inbox .msg-header p {
+    color: #fff;
+    background: #a14a4a;
+    border-radius: 13px;
+    padding: 8px 6px;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.form .user-inbox .msg-header p {
+    color: #ffffff;
+    background: #03764a;
+    word-break: break-word;
+}
+
+.wrapper .typing-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #efefef;
+    border-top: 1px solid #d9d9d9;
+    border-radius: 0 0 22px 22px;
+    padding: 10px;
+}
+
+.wrapper .typing-field .input-data {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.wrapper .typing-field .input-data textarea {
+    height: 40px;
+    min-height: 40px;
+    width: calc(100% - 50px);
+    outline: none;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 15px;
+    background: #fff;
+    resize: none; /* Evita el redimensionamiento manual */
+    overflow: hidden; /* Oculta las barras de desplazamiento */
+    transition: all 0.3s ease;
+}
+
+.typing-field .input-data textarea:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.input-data textarea::placeholder {
+    color: #999999;
+    transition: all 0.3s ease;
+}
+
+.input-data textarea:focus::placeholder {
+    color: #000000;
+}
+
+.wrapper .typing-field .input-data button {
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    background: #03764a;
+    border: 1px solid #03764a;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.typing-field .input-data button:hover {
+    background: #025c3a;
+}
+
+.typing-field .input-data button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+    background: #0f6751;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+}
+
+#chat-button:hover {
+    background: #387938;
+}
+
+#chat-button img {
+    width: 45px;
+    height: 40px;
+}
